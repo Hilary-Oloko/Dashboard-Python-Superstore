@@ -1,0 +1,33 @@
+-- Table: s_superstore.tb_superstore
+
+-- DROP TABLE IF EXISTS s_superstore.tb_superstore;
+
+CREATE TABLE IF NOT EXISTS s_superstore.tb_superstore
+(
+    order_id character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    order_date date,
+    ship_date date,
+    ship_mode character varying(100) COLLATE pg_catalog."default",
+    customer_id character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    customer_name character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    segment character varying(100) COLLATE pg_catalog."default",
+    country character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    city character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    state character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    postal_code numeric,
+    region character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    product_id character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    category character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    sub_category character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    product_name character varying COLLATE pg_catalog."default" NOT NULL,
+    sales numeric,
+    quantity numeric,
+    discount numeric,
+    profit numeric,
+    CONSTRAINT "TB_SUPERSTORE" PRIMARY KEY (order_id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS s_superstore.tb_superstore
+    OWNER to postgres;
