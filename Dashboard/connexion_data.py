@@ -7,8 +7,8 @@ def connexion_db():
     # connexion BDD
     host = "localhost"
     database = "DB_SUPERSTORE"
-    user = "postgres"
-    password = "root"
+    user = "your user name"
+    password = "your password"
     conn = psycopg2.connect(
         host=host,
         database=database,
